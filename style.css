@@ -1,0 +1,118 @@
+/* --- Global --- */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #0d1117;
+  color: #c9d1d9;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+.highlight { color: #58a6ff; }
+
+h1, h2, h5 { color: #fff; }
+.section-title {
+  text-align: center;
+  margin: 50px 0 20px;
+  font-weight: 600;
+}
+
+/* --- Hero Section --- */
+.hero {
+  text-align: center;
+  padding: 80px 20px 40px;
+}
+.profile-img {
+  width: 120px;
+  border-radius: 50%;
+  border: 2px solid #58a6ff;
+  margin-bottom: 15px;
+}
+.hero p { color: #9aa0a6; }
+
+/* --- Cards --- */
+.card {
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  color: #c9d1d9;
+  transition: transform .2s, box-shadow .2s;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 10px #58a6ff40;
+}
+
+/* --- Tech Icons --- */
+.tech-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.tech-icons img {
+  width: 50px;
+  margin: 10px;
+  transition: transform .2s;
+}
+.tech-icons img:hover { transform: scale(1.15); }
+
+/* --- Social Icons --- */
+.social-icons a {
+  margin: 0 10px;
+  color: #58a6ff;
+  font-size: 1.5rem;
+  transition: transform .2s;
+}
+.social-icons a:hover { transform: scale(1.2); }
+
+/* --- Footer --- */
+footer {
+  text-align: center;
+  margin-top: 60px;
+  padding: 20px;
+  font-size: 0.9rem;
+  color: #8b949e;
+}
+
+/* --- Fade Animation --- */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Theme Toggle --- */
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+#toggle-theme {
+  background: #161b22;
+  color: #58a6ff;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+#toggle-theme:hover {
+  background: #21262d;
+}
+
+/* --- Light Mode --- */
+.light-mode {
+  background-color: #f6f8fa;
+  color: #24292f;
+}
+.light-mode .card {
+  background-color: #fff;
+  border-color: #ddd;
+  color: #24292f;
+}
+.light-mode .social-icons a { color: #0969da; }
+.light-mode #toggle-theme { background: #fff; color: #0969da; }
