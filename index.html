@@ -1,68 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Samyak Gondane | AI & Tech Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Samyak Gondane — AI & ML Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
 </head>
 <body>
-  <div id="particles"></div>
+  <div id="bg-canvas"></div>
+
+  <nav class="nav">
+    <div class="nav-left">Samyak Gondane</div>
+    <div class="nav-right">
+      <a href="#about">About</a>
+      <a href="#skills">Tech Stack</a>
+      <a href="#projects">Projects</a>
+      <a href="#certifications">Certs</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
 
   <header class="hero">
-    <div class="profile">
-      <img src="https://i.pinimg.com/736x/92/eb/c4/92ebc4a7942d0b3166f1f4332cc0dc2a.jpg" alt="Samyak Gondane" class="profile-img">
-      <h1 class="name">Samyak Gondane</h1>
-      <p class="tagline">AI & Machine Learning Engineer | Innovator | Tech Enthusiast</p>
-      <div class="socials">
+    <div class="hero-inner">
+      <img class="profile" alt="Samyak Gondane" src="https://i.pinimg.com/736x/92/eb/c4/92ebc4a7942d0b3166f1f4332cc0dc2a.jpg">
+      <h1>Samyak Sanjay Gondane</h1>
+      <p class="subtitle">AI & ML Engineer • B.Tech Final Year • Building intelligent systems and RAG-powered tools</p>
+      <div class="links">
         <a href="https://github.com/samyakgithub" target="_blank">GitHub</a>
         <a href="https://linkedin.com/in/samyak-s-gondane/" target="_blank">LinkedIn</a>
         <a href="mailto:samyakgondane2004@gmail.com">Email</a>
+        <a href="https://samyakgithub.github.io/index.html" target="_blank">Portfolio (old)</a>
       </div>
     </div>
   </header>
 
-  <section id="about" class="section">
-    <h2>About Me</h2>
-    <p>
-      I’m a final-year B.Tech student specializing in Artificial Intelligence and Machine Learning.
-      I love building intelligent systems that blend deep tech with creativity — from IoT projects to
-      AI-driven apps that simplify real-world tasks.
-    </p>
-  </section>
+  <main>
+    <section id="about" class="section">
+      <h2>About</h2>
+      <p class="lead">
+        Final-year B.Tech student specializing in Artificial Intelligence & Machine Learning. Passionate about
+        Retrieval-Augmented Generation (RAG), LLM integrations, production-ready ML systems and automation. Experience
+        includes a Python internship building a PDF-to-Markdown conversion tool using Gemini API and LLMs and several
+        RAG/LLM projects. (Details taken from CV.) :contentReference[oaicite:1]{index=1}
+      </p>
+      <div class="row about-grid">
+        <div>
+          <h3>Education</h3>
+          <p><strong>S.B. Jain Institute of Technology, Management & Research</strong><br/>B.Tech — AI & ML (GPA: 9.35/10)</p>
+        </div>
+        <div>
+          <h3>Experience</h3>
+          <p><strong>Python Intern — Caffeinated Programmers</strong><br/>Built PDF→Markdown tool (Gemini API + LLM). Jun–Jul 2025.</p>
+        </div>
+      </div>
+    </section>
 
-  <section id="projects" class="section">
-    <h2>Projects</h2>
-    <div class="projects-container">
-      <div class="card">
-        <h3>AI Chatbot</h3>
-        <p>Developed a conversational AI model using transformer-based architectures for real-time interaction.</p>
+    <section id="skills" class="section">
+      <h2>Tech Stack</h2>
+      <div class="chips">
+        <span>Python</span><span>TensorFlow</span><span>Scikit-learn</span><span>OpenAI / Gemini API</span>
+        <span>RAG</span><span>LangChain</span><span>FAISS</span><span>Flask</span>
+        <span>SQL</span><span>Docker</span><span>GCP</span><span>AWS</span><span>Git</span>
+        <span>HTML</span><span>CSS</span><span>JavaScript</span>
       </div>
-      <div class="card">
-        <h3>IoT Parking Sensor</h3>
-        <p>Built an ESP8266-based parking assistant that updates real-time slot availability on Blynk Cloud.</p>
+    </section>
+
+    <section id="projects" class="section">
+      <h2>Selected Projects</h2>
+
+      <div class="projects-grid">
+        <article class="project-card">
+          <h3>Bitcoin Price Movement Prediction (RAG)</h3>
+          <p class="desc">Predicts next-day Bitcoin direction by combining historical price features (MA, RSI, MACD) with
+            textual signals retrieved from news and social media using a RAG pipeline. Traditional ML models (Logistic Regression,
+            Random Forest) trained on combined numeric + retrieved textual embeddings. Includes evaluation and a live-prediction demo.</p>
+          <p class="meta"><strong>Stack:</strong> Python, pandas, scikit-learn, LangChain, FAISS, OpenAI/Gemini API, yfinance</p>
+          <details>
+            <summary>Project Structure</summary>
+            <pre class="small">
+bitcoin_price_prediction_rag/
+├─ data/
+├─ notebooks/
+├─ src/
+│  ├─ data_collection.py
+│  ├─ preprocessing.py
+│  ├─ retrieval.py
+│  ├─ model_training.py
+│  └─ predict_new_data.py
+            </pre>
+          </details>
+        </article>
+
+        <article class="project-card">
+          <h3>Terminal Chat — CLI LLM Assistant</h3>
+          <p class="desc">A terminal application demonstrating function-calling with LLMs. Designed for quick terminal interactions:
+            opening URLs, searching, weather, file search, and media downloads. Packaged as a CLI with a wheel for easy install.</p>
+          <p class="meta"><strong>Stack:</strong> Python, Click/argparse, Gemini API, packaging (.whl), Windows Terminal friendly</p>
+          <details>
+            <summary>Usage</summary>
+            <pre class="small">
+pip install terminal-chat.whl
+terminal-chat
+# Then type commands like: "Open YouTube", "Search best programming language for AI", "What's the weather in Nagpur?"
+            </pre>
+          </details>
+        </article>
+
+        <article class="project-card">
+          <h3>Get-It LM (RAG-based Chatbot)</h3>
+          <p class="desc">Retrieval-Augmented chatbot that answers context-specific queries by searching local documents (PDFs, PPTX, Excel)
+            and composing answers via an LLM. Focused on fast, accurate retrieval with vector search and concise generation.</p>
+          <p class="meta"><strong>Stack:</strong> Python, LangChain, FAISS, OpenAI/Gemini API, document parsers</p>
+        </article>
+
+        <article class="project-card">
+          <h3>PDF-to-MD (PDF to Markdown Conversion)</h3>
+          <p class="desc">Automated PDF → Markdown converter built using LLMs (Gemini) to extract structure and produce clean markdown output.
+            Designed during a Python internship to streamline extraction of content and reduce manual post-processing.</p>
+          <p class="meta"><strong>Stack:</strong> Python, Gemini API, PDF parsing libraries, Jupyter</p>
+        </article>
+
+        <article class="project-card">
+          <h3>Bridging Knowledge Gaps in LLMs via Function Calls</h3>
+          <p class="desc">Research & implementation work on integrating function-calls with LLMs to let models use external tools and data,
+            improving reasoning and up-to-dateness for complex tasks.</p>
+          <p class="meta"><strong>Stack:</strong> LLMs, function-calling frameworks, Python</p>
+        </article>
+
+        <article class="project-card">
+          <h3>Fraud Detection Model</h3>
+          <p class="desc">A pipeline to detect anomalies and fraudulent patterns in financial data using classic ML preprocessing, feature engineering,
+            and model evaluation with precision/recall analysis.</p>
+          <p class="meta"><strong>Stack:</strong> Python, pandas, scikit-learn</p>
+        </article>
       </div>
-      <div class="card">
-        <h3>Local Info Retrieval (RAG)</h3>
-        <p>Created a Retrieval-Augmented Generation model for context-aware information querying.</p>
+    </section>
+
+    <section id="certifications" class="section">
+      <h2>Certifications</h2>
+      <ul class="cert-list">
+        <li>Google Analytics Certification (G4A) — Jun 2025</li>
+        <li>Oracle Cloud Infrastructure 2025 Generative AI Professional (1Z0-1127-25)</li>
+        <li>Coursera: Deep Learning Specialization (listed on CV)</li>
+        <li>Other cloud / ML certificates (GCP, AWS basics) — as listed on CV.</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <div class="contact-grid">
+        <div>
+          <p><strong>Email:</strong> <a href="mailto:samyakgondane2004@gmail.com">samyakgondane2004@gmail.com</a></p>
+          <p><strong>Phone:</strong> 9853707999</p>
+          <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/samyak-s-gondane/" target="_blank">linkedin.com/in/samyak-s-gondane/</a></p>
+          <p><strong>GitHub:</strong> <a href="https://github.com/samyakgithub" target="_blank">github.com/samyakgithub</a></p>
+        </div>
+        <form id="contact-form">
+          <input name="name" placeholder="Your name" required />
+          <input name="email" placeholder="your@email.com" type="email" required/>
+          <textarea name="message" placeholder="Message" required></textarea>
+          <button type="submit">Send</button>
+        </form>
       </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>© 2025 Samyak Sanjay Gondane</div>
+    <div class="footer-links">
+      <a href="#top">Back to top</a>
     </div>
-  </section>
-
-  <section id="contact" class="section">
-    <h2>Contact</h2>
-    <form id="contact-form">
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
-
-  <footer>
-    <p>© 2025 Samyak Gondane | Built with 💡 AI & Passion</p>
   </footer>
 </body>
 </html>
