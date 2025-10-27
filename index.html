@@ -31,7 +31,6 @@
         <a href="https://github.com/samyakgithub" target="_blank">GitHub</a>
         <a href="https://linkedin.com/in/samyak-s-gondane/" target="_blank">LinkedIn</a>
         <a href="mailto:samyakgondane2004@gmail.com">Email</a>
-        <a href="https://samyakgithub.github.io/index.html" target="_blank">Portfolio (old)</a>
       </div>
     </div>
   </header>
@@ -41,18 +40,17 @@
       <h2>About</h2>
       <p class="lead">
         Final-year B.Tech student specializing in Artificial Intelligence & Machine Learning. Passionate about
-        Retrieval-Augmented Generation (RAG), LLM integrations, production-ready ML systems and automation. Experience
-        includes a Python internship building a PDF-to-Markdown conversion tool using Gemini API and LLMs and several
-        RAG/LLM projects. (Details taken from CV.) :contentReference[oaicite:1]{index=1}
+        Retrieval-Augmented Generation (RAG), LLM integrations, and production-ready ML systems. Experience includes
+        a Python internship building a PDF-to-Markdown conversion tool using Gemini API and multiple RAG/LLM projects.
       </p>
       <div class="row about-grid">
         <div>
           <h3>Education</h3>
-          <p><strong>S.B. Jain Institute of Technology, Management & Research</strong><br/>B.Tech — AI & ML (GPA: 9.35/10)</p>
+          <p><strong>S.B. Jain Institute of Technology, Management & Research</strong><br/>B.Tech — AI & ML (GPA 9.35/10)</p>
         </div>
         <div>
           <h3>Experience</h3>
-          <p><strong>Python Intern — Caffeinated Programmers</strong><br/>Built PDF→Markdown tool (Gemini API + LLM). Jun–Jul 2025.</p>
+          <p><strong>Python Intern — Caffeinated Programmers</strong><br/>Built PDF → Markdown tool (Gemini API + LLM). Jun–Jul 2025.</p>
         </div>
       </div>
     </section>
@@ -69,70 +67,46 @@
 
     <section id="projects" class="section">
       <h2>Selected Projects</h2>
-
       <div class="projects-grid">
         <article class="project-card">
           <h3>Bitcoin Price Movement Prediction (RAG)</h3>
-          <p class="desc">Predicts next-day Bitcoin direction by combining historical price features (MA, RSI, MACD) with
-            textual signals retrieved from news and social media using a RAG pipeline. Traditional ML models (Logistic Regression,
-            Random Forest) trained on combined numeric + retrieved textual embeddings. Includes evaluation and a live-prediction demo.</p>
-          <p class="meta"><strong>Stack:</strong> Python, pandas, scikit-learn, LangChain, FAISS, OpenAI/Gemini API, yfinance</p>
-          <details>
-            <summary>Project Structure</summary>
-            <pre class="small">
-bitcoin_price_prediction_rag/
-├─ data/
-├─ notebooks/
-├─ src/
-│  ├─ data_collection.py
-│  ├─ preprocessing.py
-│  ├─ retrieval.py
-│  ├─ model_training.py
-│  └─ predict_new_data.py
-            </pre>
-          </details>
+          <p class="desc">Predicts next-day Bitcoin direction by combining historical indicators (MA, RSI, MACD)
+             with textual data from crypto news and social media using a RAG pipeline.
+             Includes live-prediction demo.</p>
+          <p class="meta"><strong>Stack:</strong> Python, pandas, scikit-learn, LangChain, FAISS, Gemini API, yfinance</p>
         </article>
 
         <article class="project-card">
           <h3>Terminal Chat — CLI LLM Assistant</h3>
-          <p class="desc">A terminal application demonstrating function-calling with LLMs. Designed for quick terminal interactions:
-            opening URLs, searching, weather, file search, and media downloads. Packaged as a CLI with a wheel for easy install.</p>
-          <p class="meta"><strong>Stack:</strong> Python, Click/argparse, Gemini API, packaging (.whl), Windows Terminal friendly</p>
-          <details>
-            <summary>Usage</summary>
-            <pre class="small">
-pip install terminal-chat.whl
-terminal-chat
-# Then type commands like: "Open YouTube", "Search best programming language for AI", "What's the weather in Nagpur?"
-            </pre>
-          </details>
+          <p class="desc">Terminal app demonstrating LLM function calling: open URLs, search Google, get weather,
+             manage files, download videos. Packaged as a CLI wheel.</p>
+          <p class="meta"><strong>Stack:</strong> Python, Click, argparse, Gemini API, Windows Terminal</p>
         </article>
 
         <article class="project-card">
           <h3>Get-It LM (RAG-based Chatbot)</h3>
-          <p class="desc">Retrieval-Augmented chatbot that answers context-specific queries by searching local documents (PDFs, PPTX, Excel)
-            and composing answers via an LLM. Focused on fast, accurate retrieval with vector search and concise generation.</p>
-          <p class="meta"><strong>Stack:</strong> Python, LangChain, FAISS, OpenAI/Gemini API, document parsers</p>
+          <p class="desc">Retrieval-Augmented chatbot that answers context-specific queries from local documents (PDFs, PPTX, Excel)
+             via vector search + LLM generation.</p>
+          <p class="meta"><strong>Stack:</strong> Python, LangChain, FAISS, Gemini API, document parsers</p>
         </article>
 
         <article class="project-card">
           <h3>PDF-to-MD (PDF to Markdown Conversion)</h3>
-          <p class="desc">Automated PDF → Markdown converter built using LLMs (Gemini) to extract structure and produce clean markdown output.
-            Designed during a Python internship to streamline extraction of content and reduce manual post-processing.</p>
-          <p class="meta"><strong>Stack:</strong> Python, Gemini API, PDF parsing libraries, Jupyter</p>
+          <p class="desc">Automated PDF → Markdown converter built with Gemini LLMs to extract structure and
+             generate clean markdown output for developers.</p>
+          <p class="meta"><strong>Stack:</strong> Python, Gemini API, PDF processing libraries</p>
         </article>
 
         <article class="project-card">
           <h3>Bridging Knowledge Gaps in LLMs via Function Calls</h3>
-          <p class="desc">Research & implementation work on integrating function-calls with LLMs to let models use external tools and data,
-            improving reasoning and up-to-dateness for complex tasks.</p>
-          <p class="meta"><strong>Stack:</strong> LLMs, function-calling frameworks, Python</p>
+          <p class="desc">Research implementation integrating LLMs with external APIs through function calls,
+             improving reasoning and factual accuracy in AI assistants.</p>
+          <p class="meta"><strong>Stack:</strong> Python, LLM function-calling frameworks</p>
         </article>
 
         <article class="project-card">
           <h3>Fraud Detection Model</h3>
-          <p class="desc">A pipeline to detect anomalies and fraudulent patterns in financial data using classic ML preprocessing, feature engineering,
-            and model evaluation with precision/recall analysis.</p>
+          <p class="desc">Machine-learning pipeline to detect anomalies and fraudulent transactions through feature engineering and model evaluation.</p>
           <p class="meta"><strong>Stack:</strong> Python, pandas, scikit-learn</p>
         </article>
       </div>
@@ -143,8 +117,7 @@ terminal-chat
       <ul class="cert-list">
         <li>Google Analytics Certification (G4A) — Jun 2025</li>
         <li>Oracle Cloud Infrastructure 2025 Generative AI Professional (1Z0-1127-25)</li>
-        <li>Coursera: Deep Learning Specialization (listed on CV)</li>
-        <li>Other cloud / ML certificates (GCP, AWS basics) — as listed on CV.</li>
+        <li>Coursera — Deep Learning Specialization (Andrew Ng)</li>
       </ul>
     </section>
 
@@ -153,15 +126,15 @@ terminal-chat
       <div class="contact-grid">
         <div>
           <p><strong>Email:</strong> <a href="mailto:samyakgondane2004@gmail.com">samyakgondane2004@gmail.com</a></p>
-          <p><strong>Phone:</strong> 9853707999</p>
-          <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/samyak-s-gondane/" target="_blank">linkedin.com/in/samyak-s-gondane/</a></p>
+          <p><strong>Phone:</strong> +91 9853707999</p>
+          <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/samyak-s-gondane/" target="_blank">linkedin.com/in/samyak-s-gondane</a></p>
           <p><strong>GitHub:</strong> <a href="https://github.com/samyakgithub" target="_blank">github.com/samyakgithub</a></p>
         </div>
         <form id="contact-form">
-          <input name="name" placeholder="Your name" required />
-          <input name="email" placeholder="your@email.com" type="email" required/>
-          <textarea name="message" placeholder="Message" required></textarea>
-          <button type="submit">Send</button>
+          <input name="name" placeholder="Your Name" required />
+          <input name="email" placeholder="Your Email" type="email" required />
+          <textarea name="message" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
         </form>
       </div>
     </section>
@@ -169,9 +142,7 @@ terminal-chat
 
   <footer class="footer">
     <div>© 2025 Samyak Sanjay Gondane</div>
-    <div class="footer-links">
-      <a href="#top">Back to top</a>
-    </div>
+    <div class="footer-links"><a href="#top">Back to Top</a></div>
   </footer>
 </body>
 </html>
